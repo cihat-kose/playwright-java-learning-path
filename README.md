@@ -1,5 +1,5 @@
-
-# PlaywrightLearn
+# PlaywrightJavaLearn
+A beginner-friendly project to explore browser automation using Playwright with Java and Maven.
 
 ![Playwright](https://img.shields.io/badge/Playwright-2D6DB5?style=for-the-badge&logo=playwright&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
@@ -8,7 +8,12 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/ChatGTHB/JavaPatikaProjects?style=for-the-badge)
 
 ## Introduction
-This project is created to learn and experiment with browser automation using Playwright. It demonstrates basic Playwright functions implemented in Java, allowing users to practice web automation. As the learning process continues, new features will be added to the project.
+This project is created to learn and experiment with browser automation using Playwright. It demonstrates basic Playwright functions implemented in Java, allowing users to practice web automation.
+
+### Future Scope
+As the learning process continues:
+- Advanced Playwright scenarios will be added.
+- Support for CI/CD integration will be explored.
 
 ## Table of Contents
 - [💡 Introduction](#introduction)
@@ -59,6 +64,10 @@ mvn test
 
 ## Contributing
 Contributions are welcome!
+
+Before contributing, ensure:
+- Code follows Java naming conventions.
+- Tests are included for new features.
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).

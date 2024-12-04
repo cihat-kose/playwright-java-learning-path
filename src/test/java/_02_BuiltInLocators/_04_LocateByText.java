@@ -20,7 +20,7 @@ public class _04_LocateByText extends BaseDriver {
         abTestingLink.click();
 
         // Yeni sayfanın başlığını kontrol et
-        String expectedHeader = "A/B Test Control";
+        String expectedHeader = "A/B Test Variation 1";
         Locator header = page.locator("h3");
         assertEquals(expectedHeader, header.textContent(), "Page header should match the expected header.");
     }

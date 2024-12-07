@@ -1,49 +1,39 @@
 package _01_PlaywrightIntro;
+
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
-import java.awt.*;
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class _01_OpeningAndClosingBrowser {
     public static void main(String[] args) {
-        // Playwright nesnesi oluşturuluyor, tarayıcı başlatılması için gerekli
+        // Creating a Playwright object
         Playwright playwright = Playwright.create();
 
-        // Chrome tarayıcısı başlatılıyor, headless mod kapalı (görsel tarayıcı), slowMo ile işlemler 50ms gecikmeli
+        // Launching the browser in headless=false mode with slowMo
         Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(50));
 
-        // Yeni bir sayfa oluşturuluyor
+        // Creating a new page
         Page page = browser.newPage();
 
-        // Kullanıcının ekran çözünürlüğünü almak için Toolkit sınıfını kullanıyoruz
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int screenWidth = (int) screenSize.getWidth();
-        int screenHeight = (int) screenSize.getHeight();
-
-        // Dinamik olarak kullanıcının ekran boyutuna ayarlama
-        page.setViewportSize(screenWidth, screenHeight); // Bu, sayfanın boyutunu kullanıcının ekran çözünürlüğüne göre ayarlar.
-
-        // Belirtilen URL'ye gidiliyor
+        // Navigating to the specified URL
         page.navigate("http://playwright.dev");
 
-        // Sayfa başlığı konsola yazdırılıyor
-        System.out.println(page.title());
+        // Using Playwright Assertions to verify the page title
+        assertThat(page).hasTitle("Fast and reliable end-to-end testing for modern web apps | Playwright");
 
-        // Sayfa kapatılıyor.
-        // Bu adım, tarayıcıyı açık tutarken yalnızca bu spesifik sayfayı kapatır.
-        // Örneğin, başka sayfalar da açılmış olsaydı, sadece bu sayfa kapanmış olurdu.
+        // Printing the page title to confirm
+        System.out.println("Page title: " + page.title());
+
+        // Closing the page
         page.close();
 
-        // Tarayıcı kapatılıyor.
-        // Tarayıcıya ait tüm sayfalar kapatılır ve tarayıcı örneği sonlandırılır.
-        // Tarayıcının kapatılması bellekte kullanılan kaynakları serbest bırakır.
+        // Closing the browser
         browser.close();
 
-        // Playwright oturumu kapatılıyor.
-        // Playwright'in tüm kaynaklarını temizlemek ve işlem sonlandırmalarını sağlamak için bu adım önemlidir.
-        // Bu, Playwright'te kullanılan tüm tarayıcı örnekleri ve ilişkili kaynakları serbest bırakır.
+        // Closing the Playwright session
         playwright.close();
     }
 }

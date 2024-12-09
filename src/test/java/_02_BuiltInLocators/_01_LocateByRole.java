@@ -11,16 +11,20 @@ public class _01_LocateByRole extends BaseDriver {
 
     @Test
     public void findSearchButtonByRole() {
-        // Wikipedia ana sayfasına git
+        // Navigate to the Wikipedia homepage
         page.navigate("https://www.wikipedia.org");
 
-        // "Search" butonunu role ve isim ile bul
+        // Locate the "Search" button by role and name
         Locator searchButton = page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Search"));
 
-        // Butonun görünür olmasını bekleyin
+        // Wait for the button to become visible
         searchButton.waitFor();
 
-        // Butona tıklayın
+        // Click the button
         searchButton.click();
+
+        // Verification: Check if the button click triggered the expected action
+        // For example, checking if the page title or URL has changed
+        assertTrue(page.url().contains("search"), "Expected URL to contain 'search' after clicking the button");
     }
 }

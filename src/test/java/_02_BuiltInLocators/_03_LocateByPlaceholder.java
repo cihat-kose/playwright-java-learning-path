@@ -10,17 +10,17 @@ public class _03_LocateByPlaceholder extends BaseDriver {
 
     @Test
     public void findInputByPlaceholder() {
-        // DemoQA form sayfasına git
+        // Navigate to the DemoQA form page
         page.navigate("https://demoqa.com/text-box");
 
-        // Placeholder'a göre input alanını bul ('Full Name' placeholder'ına sahip alan)
+        // Locate the input field using its placeholder ('Full Name' placeholder)
         Locator nameInput = page.getByPlaceholder("Full Name");
 
-        // Input alanına bir değer gir
+        // Enter a value into the input field
         String testName = "Kerem Said";
         nameInput.fill(testName);
 
-        // Girilen değerin doğruluğunu kontrol et
+        // Verify that the entered value matches the expected value
         assertEquals(testName, nameInput.inputValue(), "Input value should match the entered value.");
     }
 }

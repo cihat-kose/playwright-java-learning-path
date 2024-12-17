@@ -10,16 +10,16 @@ public class _04_LocateByText extends BaseDriver {
 
     @Test
     public void findElementByText() {
-        // The Internet Herokuapp sayfasına git
+        // Navigate to The Internet Herokuapp page
         page.navigate("https://the-internet.herokuapp.com/");
 
-        // 'A/B Testing' bağlantısını LocateByText ile bul
+        // Locate the 'A/B Testing' link using LocateByText
         Locator abTestingLink = page.getByText("A/B Testing");
 
-        // Bağlantıya tıkla
+        // Click the link
         abTestingLink.click();
 
-        // Yeni sayfanın başlığını kontrol et
+        // Verify the header text of the new page
         String expectedHeader = "A/B Test Variation 1";
         Locator header = page.locator("h3");
         assertEquals(expectedHeader, header.textContent(), "Page header should match the expected header.");

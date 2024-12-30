@@ -1,4 +1,4 @@
-# PlaywrightJavaLearn
+# Playwright Java Learn
 A beginner-friendly project to explore browser automation using Playwright with Java and Maven.
 
 ![Playwright](https://img.shields.io/badge/Playwright-2D6DB5?style=for-the-badge&logo=playwright&logoColor=white)
@@ -35,7 +35,7 @@ As the learning process continues:
 1. Open **IntelliJ IDEA**.
 2. Go to **File > New > Project from Version Control**.
 3. In the **URL** field, enter the repository URL:
-   https://github.com/ChatGTHB/PlaywrightLearn.git
+   https://github.com/cihat-kose/playwright-java-learn.git
 4. Click **Clone**.
 5. IntelliJ IDEA will automatically detect and import the project as a **Maven** project.
 6. Wait for the dependencies to be downloaded.
@@ -43,9 +43,9 @@ As the learning process continues:
 ### Option 2: Using Command Line
 
 1. Clone the repository:
-   git clone https://github.com/ChatGTHB/PlaywrightLearn.git
+   git clone https://github.com/cihat-kose/playwright-java-learn.git
 2. Navigate to the project directory:
-   cd PlaywrightLearn
+   cd playwright-java-learn
 3. Install the necessary dependencies:
    mvn install
 

@@ -5,7 +5,7 @@ A beginner-friendly project to explore browser automation using Playwright with 
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![JUnit](https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white)
-![GitHub last commit](https://img.shields.io/github/last-commit/cihat-kose/playwright-java-learning-path?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/cihat-kose/playwright-java-learning-path?style=for-the-badge&cacheSeconds=60)
 
 ## Introduction
 This project is created to learn and experiment with browser automation using Playwright. It demonstrates basic Playwright functions implemented in Java, allowing users to practice web automation.
